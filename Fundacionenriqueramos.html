@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fundación Enrique Ramos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffffff, #e6f0ff);
+      color: #333;
+    }
+    header {
+      background-color: #004aad;
+      color: white;
+      padding: 0;
+      text-align: center;
+    }
+    header img {
+      width: 100%;
+      height: auto;
+    }
+    section {
+      padding: 2rem;
+      margin: 1rem;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #004aad;
+    }
+    .button {
+      background-color: #ff0000;
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+    input, select, textarea {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    .confirmation {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 1rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+      display: none;
+    }
+    .patrocinadores-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .patrocinador-logo {
+      max-width: 200px;
+      max-height: 100px;
+      object-fit: contain;
+    }
+    .director-img {
+      display: block;
+      margin: 0 auto 1rem;
+      max-width: 300px;
+      border-radius: 12px;
+    }
+    .contact-section {
+      position: relative;
+      padding-bottom: 5rem;
+    }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .whatsapp-float img {
+      width: 36px;
+      height: 36px;
+    }
+    @media (max-width: 768px) {
+      section {
+        margin: 1rem 0.5rem;
+      }
+      .patrocinador-logo {
+        max-width: 150px;
+        max-height: 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://raw.githubusercontent.com/kikeramos2025/fundaci-n-enrique-v2/main/portada.png" alt="Portada Fundación" />
+  </header>
+
+  <section>
+    <h2>¿Quiénes somos?</h2>
+    <p>Somos una fundación dedicada a proporcionar ayuda médica, terapéutica y emocional a niños y jóvenes con discapacidad. Con enfoque humano y profesional, trabajamos para mejorar su calidad de vida.</p>
+  </section>
+
+  <section>
+    <h2>Misión</h2>
+    <p>Proporcionar estudios clínicos gratuitos o de bajo costo a niños y jóvenes con discapacidad, ayudando a sus familias a obtener diagnósticos y tratamientos adecuados.</p>
+  </section>
+
+  <section>
+    <h2>Visión</h2>
+    <p>Lograr un futuro en el que todos los niños y jóvenes tengan acceso a diagnósticos adecuados, tratamientos integrales y apoyo emocional, contribuyendo a su inclusión y desarrollo en la sociedad.</p>
+  </section>
+
+  <section>
+    <h2>Valores</h2>
+    <ul>
+      <li>Ética profesional</li>
+      <li>Empatía</li>
+      <li>Diversidad</li>
+      <li>Honestidad</li>
+      <li>Responsabilidad</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>📢 ¡Ayúdanos a seguir cambiando vidas!</h2>
+    <p>Cada donativo permite que niños y jóvenes con discapacidad reciban estudios médicos, terapias y apoyo emocional. Súmate al sueño de Enrique Ramos y haz la diferencia hoy.</p>
+    <a class="button" href="https://www.paypal.com/donate/?hosted_button_id=2GXJH4JZ3LZ3L" target="_blank" style="display:inline-flex; align-items:center; gap:0.5rem;">
+      <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal" style="height:24px;">
+      Donar con PayPal
+    </a>
+  </section>
+
+  <section>
+    <h2>Hazte voluntario</h2>
+    <p>Únete a nuestro equipo de corazones solidarios. ¡Tu ayuda transforma vidas!</p>
+  </section>
+
+  <section>
+    <h2>Registro de Ingreso</h2>
+    <form id="formIngreso">
+      <input required placeholder="Nombre completo" />
+      <input required type="number" placeholder="Edad" />
+      <input required placeholder="Condición médica" />
+      <select required>
+        <option value="">Sexo</option>
+        <option>Femenino</option>
+        <option>Masculino</option>
+        <option>Otro</option>
+      </select>
+      <input required type="tel" pattern="\d{10}" placeholder="Teléfono (10 dígitos)" />
+      <input required type="email" placeholder="Correo electrónico" />
+      <input required placeholder="Nombre del padre o tutor" />
+      <input required placeholder="Dirección" />
+      <input required placeholder="Ciudad" />
+      <input required placeholder="Estado" />
+      <input required type="date" />
+      <textarea placeholder="Comentarios"></textarea>
+      <button class="button" type="submit">Enviar</button>
+      <div class="confirmation" id="confirmIngreso">✅ Gracias, por tu registro.<br>⏳ Redirigiendo al inicio...<br>Te contactaremos pronto.</div>
+    </form>
+  </section>
+
+  <section>
+    <h2>Registro de Voluntarios</h2>
+    <form id="formVoluntario">
+      <input required placeholder="Nombre completo" />
+      <input required type="number" placeholder="Edad" />
+      <select required>
+        <option value="">Sexo</option>
+        <option>Femenino</option>
+        <option>Masculino</option>
+        <option>Otro</option>
+      </select>
+      <input required type="tel" pattern="\d{10}" placeholder="Teléfono (10 dígitos)" />
+      <textarea placeholder="Comentarios"></textarea>
+      <button class="button" type="submit">Enviar</button>
+      <div class="confirmation" id="confirmVoluntario">✅ Gracias, por tu registro.<br>⏳ Redirigiendo al inicio...<br>Te contactaremos pronto.</div>
+    </form>
+  </section>
+
+  <section>
+    <h2 style="text-align:center">Nuestros Patrocinadores</h2>
+    <div class="patrocinadores-container">
+      <img class="patrocinador-logo" src="https://raw.githubusercontent.com/kikeramos2025/fundaci-n-enrique-v2/main/imagen%20laboratorio%20ramos.png" alt="Laboratorio Ramos" />
+      <img class="patrocinador-logo" src="https://raw.githubusercontent.com/kikeramos2025/fundaci-n-enrique-v2/main/RAGA.jpg" alt="RAGA" />
+      <img class="patrocinador-logo" src="https://raw.githubusercontent.com/kikeramos2025/fundaci-n-enrique-v2/main/KID%20LAB.jpg" alt="KID LAB" />
+      <img class="patrocinador-logo" src="https://raw.githubusercontent.com/kikeramos2025/fundaci-n-enrique-v2/main/GDR%20medical.jpg" alt="GDR Medical" />
+    </div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center">Director General</h2>
+    <img class="director-img" src="https://raw.githubusercontent.com/kikeramos2025/fundaci-n-enrique-v2/main/Director%20Enrique%20Ramos.jpg" alt="Enrique Ramos" />
+    <p style="text-align:center; font-weight:bold">Enrique Ramos Coronado<br>Director General</p>
+    <p>La Historia de Nuestro director: <br><br>
+      Enrique Ramos Coronado es un joven con una gran sonrisa y un corazón inmenso. Desde su nacimiento, Enrique ha vivido con Parálisis Cerebral Infantil (PCI), una condición que afecta su movilidad, pero jamás ha limitado su espíritu ni sus sueños.<br><br>
+      Gracias al amor incondicional de su familia y el apoyo de personas que creyeron en él, Enrique ha tenido acceso a terapias, estudios médicos y oportunidades que, lamentablemente, muchas personas con discapacidad no logran alcanzar. Esta realidad no pasó desapercibida para Enrique. Desde muy joven, comprendió que su camino, aunque lleno de retos, había sido también afortunado gracias a quienes estuvieron a su lado.<br><br>
+      Con esa conciencia y un deseo genuino de ayudar, Enrique decidió crear la Fundación Enrique Ramos, una organización dedicada a brindar estudios clínicos, apoyo emocional y orientación a niños y jóvenes con discapacidad y a sus familias. Su misión es clara: ofrecer oportunidades a quienes más lo necesitan, porque —como él dice— "todos merecemos una oportunidad de vivir con dignidad, salud y amor".<br><br>
+      Hoy, Enrique no solo es un ejemplo de superación, sino también un puente de esperanza para muchas personas. Su historia inspira y demuestra que, cuando se tiene voluntad y corazón, es posible cambiar vidas.</p>
+  </section>
+
+  <section class="contact-section">
+    <h2>Contacto</h2>
+    <p>Correo: <a href="mailto:directorenriqueramos@gmail.com">directorenriqueramos@gmail.com</a></p>
+  </section>
+
+  <!-- Botón flotante WhatsApp -->
+  <a class="whatsapp-float" href="https://wa.me/526442043428" target="_blank" aria-label="Chat en WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/>
+  </a>
+
+  <script>
+    function handleFormSubmit(formId, confirmId, sheetURL) {
+      const form = document.getElementById(formId);
+      const confirm = document.getElementById(confirmId);
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const data = Array.from(form.elements)
+          .filter(el => el.tagName === 'INPUT' || el.tagName === 'TEXTAREA' || el.tagName === 'SELECT')
+          .map(el => el.value);
+
+        try {
+          await fetch(sheetURL, {
+            method: 'POST',
+            mode: 'no-cors',
+            body: JSON.stringify(data)
+          });
+
+          confirm.style.display = 'block';
+          setTimeout(() => {
+            confirm.style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }, 5000);
+
+          form.reset();
+        } catch (err) {
+          alert('Error al enviar. Intenta nuevamente.');
+        }
+      });
+    }
+
+    handleFormSubmit('formIngreso', 'confirmIngreso', 'https://script.google.com/macros/s/AKfycbwOuorpifxqchL-ix8B3pbfZVMP6SBWzjta79eJr57ac4bCdjGMPAwIJZj7ovZhEtUh/exec');
+    handleFormSubmit('formVoluntario', 'confirmVoluntario', 'https://script.google.com/macros/s/AKfycbwOuorpifxqchL-ix8B3pbfZVMP6SBWzjta79eJr57ac4bCdjGMPAwIJZj7ovZhEtUh/exec');
+  </script>
+</body>
+</html>
